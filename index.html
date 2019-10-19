@@ -8,10 +8,132 @@
     <meta name="description"
           content="Test autofill and autocomplete online with a variety of web forms.">
 
+    <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="style.css">
+
     <link rel="icon" href="data:,">
 </head>
 <body>
+<section class="section">
+    <div class="container">
+        <h1>Autofill Site</h1>
+        <h2>Test browser or extension autofill and autocomplete online</h2>
+    </div>
+</section>
 
+<section class="section">
+    <div class="container">
+        <h3>Useful Resources</h3>
+        <ul>
+            <li>
+                <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill">The official HTML5 autocomplete specification</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h3>Test Autofill</h3>
+        <p>
+            Autofill by both browsers and browser extensions brings convenience and organization to the web. As
+            applications become more complicated, so do the types of data and layouts of input elements. The following
+            workflows demonstrate common form patterns.
+        </p>
+        <h4>The Everything Form</h4>
+        <p>
+            You may have to go through the workflows once to save credentials for this site. For that, you can use the
+            Everything Form.
+        </p>
+        <p>
+            The Everything Form
+        </p>
+
+        <h4>Login</h4>
+        <ul>
+            <li>Login &ndash; Standard</li>
+            <li>Login &ndash; Subsequent Input, Disabled</li>
+            <li>Login &ndash; Subsequent Input, Hidden</li>
+            <li>Login &ndash; Subsequent Input, Separate Page</li>
+            <li>Login &ndash; Modal</li>
+            <li>Login &ndash; Unrelated Input in Separate Form</li> <!-- e.g. Namecheap -->
+            <li>Login &ndash; Form Disabled</li>
+        </ul>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h3>Prevent Autofill</h3>
+        <p>
+            There are scenarios where autofill is inappropriate and should be disabled, like when the expected data for
+            a form is unrelated to the browser's user. These situations tend to occur in business applications
+            (like a data entry form), but also exist in consumer-facing products (like a two-factor auth code, or an
+            incident report form).
+        </p>
+        <p>
+            There is an unfortunate arms-race between browser developers and website developers over the ability
+            to disable autofill. There are many email chains and bug reports that discuss the motivations at length, so
+            it suffices to say that when a developer considers modifying autofill behavior, they must consider both
+            usability for the end user and the application's intended workflow.
+        </p>
+
+        <h4>HTML Standard</h4>
+        <p>
+            The standard way to disable autofill is to set the autocomplete attribute to &quot;off&quot;. This is almost
+            universally disrespected by browsers, especially in login fields.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        Workflow & Method
+                    </td>
+                    <td>
+                        Works in Firefox
+                    </td>
+                    <td>
+                        Works in Chrome
+                    </td>
+                    <td>
+                        Works in Edge
+                    </td>
+                    <td>
+                        Works in Safari
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Login &ndash; autocomplete=&quot;off&quot;
+                    </td>
+                    <td>
+                        No
+                    </td>
+                    <td>
+                        No
+                    </td>
+                    <td>
+                        No
+                    </td>
+                    <td>
+                        No
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Hidden Fields and Other Tricks</h4>
+
+        <h4>Field Names</h4>
+        <p>
+            These methods most reliably prevent autofill, at the cost of accessibility and ease of form processing.
+        </p>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h3>Detect Autofill</h3>
+    </div>
+</section>
 </body>
 </html>
